@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  background:url('wood.jpg');
+  background-size:cover;
+  background-repeat:repeat;
+  color:#000;
+}
+
+figure img{
+  display:none;
+}
+figure .img {
+  width: 250px;
+  height: 250px;
+  background-size:cover;
+  background-position: center center;
+}
+
+figure figcaption {
+  text-align: center;
+  font-family: 'Reenie Beanie', cursive;
+  
+}
+
+figure figcaption h2 {
+  margin:0;
+  padding:0;
+  display:block;
+  line-height: 1.5em;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight:normal;
+}
+
+figure figcaption p {
+  display:none;
+}
+
+figure {
+  background-color: white;
+  box-shadow:         3px 3px 5px 6px rgba(0,0,0, 0.2);
+  padding: 30px;
+  width: 250px;
+  
+  transform: scale(0.7);
+  transition: all 1s ease-in-out,
+              z-index 0s ease-in-out 1s;
+  position:absolute;
+  
+  z-index:0;
+}
+
+figure:nth-child(2n) {  
+  transform: rotate(10deg) scale(0.7);
+}
+
+figure:nth-child(3n) {  
+  transform: rotate(-10deg) scale(0.7);
+}
+
+figure.prev, figure.next{
+  top:0;
+  transform: zoom(0.9);
+}
+
+figure.prev {
+  left: 0%;
+}
+
+figure.next {
+  left: 100%;
+  margin-left: -300px;
+}
+
+figure.current {
+  transform: rotate(0deg) scale(1);
+  left: 50%;
+  margin-left: -125px;
+  z-index:100;
+}
